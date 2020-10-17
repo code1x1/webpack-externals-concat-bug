@@ -3,8 +3,19 @@ module.exports = {
   optimization: {
     minimize: false,
   },
+  module : {
+    rules : [
+      {
+          test: /\.js?/,
+          use: {
+              loader: 'babel-loader'
+          },
+          exclude: /node_modules/
+      },
+    ]
+  },
   externals: {
-    lodash: '_'
+    lodash: 'this _'
   },
   output: {
     path: __dirname + '/dist',

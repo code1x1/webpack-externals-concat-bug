@@ -1,0 +1,19 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "debug": true,
+                "modules": false,
+                "forceAllTransforms": true,
+                "useBuiltIns": "usage"
+            }
+        ]
+    ],
+    "plugins": [
+        ["@babel/plugin-transform-modules-commonjs", {
+        "allowTopLevelThis": true,
+        "strict": false
+        }]
+    ]
+}
